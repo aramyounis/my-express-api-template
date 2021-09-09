@@ -1,0 +1,98 @@
+## get all items 
+get http://localhost:5000/api/items
+
+
+### create new item 
+post http://localhost:5000/api/items
+
+
+### get single item 
+get http://localhost:5000/api/items/1
+
+
+### delete item 
+delete  http://localhost:5000/api/items/1
+
+
+### update item 
+put  http://localhost:5000/api/items/1
+
+
+
+
+
+
+
+
+
+### login to account
+post http://localhost:5000/api/auth/login 
+
+
+### register account 
+post http://localhost:5000/api/auth/register 
+
+
+### refresh token 
+post http://localhost:5000/api/auth/refreshtoken 
+
+
+### logout account 
+post http://localhost:5000/api/auth/logout 
+
+
+### forget passowrd by email 
+post http://localhost:5000/api/auth/forgetpassword 
+
+
+
+### change passowrd on profile 
+post http://localhost:5000/api/auth/changepassword 
+
+
+
+
+
+
+
+
+
+### get all name part by category like (cpu ,case ,motherborad ...)  
+get http://localhost:5000/api/pcpart/cpu
+
+
+### get information about one part 
+get http://localhost:5000/api/pcpart/cpu/Intel Core i7-11700K
+
+
+
+
+
+### get user information 
+get http://localhost:5000/api/user/aram
+
+
+### get user items 
+get http://localhost:5000/api/user/aram/items
+
+
+
+
+
+
+
+
+
+
+
+
+### get all stores info 
+get http://localhost:5000/api/store
+
+
+### get store information by store name 
+get http://localhost:5000/api/store/hawranj
+
+
+### get store items by store name 
+get http://localhost:5000/api/store/hawranj/items

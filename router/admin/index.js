@@ -1,4 +1,4 @@
-const Router = require("express-promise-router");
+const { Router } = require("express");
 
 const adminRoute = Router();
 

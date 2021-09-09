@@ -1,17 +1,9 @@
-const Router = require("express-promise-router");
-
+const { Router } = require("express");
 const storeRoute = Router();
+const store_controller = require("../../controller/stroe_controller");
 
-storeRoute.get("/", (req, res) => {
-  res.send("stores");
-});
-
-storeRoute.get("/:store", (req, res) => {
-  res.send(`name: ${req.params.store}`);
-});
-
-storeRoute.get("/:store/items", (req, res) => {
-  res.send(`items ${req.params.store}`);
-});
+storeRoute.get("/", store_controller.getAll_stores);
+storeRoute.get("/:store", store_controller.getStore_info);
+storeRoute.get("/:store/items", store_controller.getStore_items);
 
 module.exports = storeRoute;

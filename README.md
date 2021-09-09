@@ -3,7 +3,7 @@
 - backend nodejs ( express )
 - frontend react nextjs
 - database postgresql
-- authentication ( jwt token )
+- authentication ( jwt token or Pasportjs )
 
 ## users type
 
@@ -77,18 +77,22 @@
   - api/auth/changePassword {POST} {PROTECT} user or store can change our password by old password
   - api/auth/forgetPassword {POST} {PUBLIC} user or store can forget password by email
   - api/auth/refreshToken {POST} {PROTECT} refreshing access token after expire with refresh token return new access token
-  - api/auth/getUserInformation {PROTECT}
 
 - item
 
   - api/items {GET} {PUBLIC} return all items
-  - api/item {POST} {PROTECT} create new item costumer or store can do this
-  - api/:user/items {GET} {PUBLIC} return user items
-  - api/item/:id {GET} {PUBLIC} return single item
-  - api/item/:id {PUT} {PROTECT} update item
-  - api/item/:id {DELETE} {PROTECT} delete item
+  - api/items/?limit=:number {GET} {Public} return limited items like 5 or 10 items
+  - api/items/:id {GET} {PUBLIC} return single item
+  - api/items {POST} {PROTECT} create new item costumer or store can do this
+  - api/items/:id {PUT} {PROTECT} update item
+  - api/items/:id {DELETE} {PROTECT} delete item
 
 - store
+
   - api/stores {GET} {PUBLIC} return all stores
   - api/store/:storeName {GET} {PUBLIC} return store information by name
   - api/store/:storeName/items {GET} {PUBLIC} return store items by store name
+
+- user
+  - api/user/:username {GET} {PUBLIC} return user information by username
+  - api/user/:username/items {GET} {PUBLIC} return user items

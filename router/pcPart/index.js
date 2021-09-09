@@ -1,18 +1,8 @@
-const Router = require("express-promise-router");
+const { Router } = require("express");
+const pcPartRoute = Router();
+const pcPart_controller = require("../../controller/pcPart_controller");
 
-const {
-  getSingleHardware_controller,
-  getAllHardware_controller,
-} = require("../../controller/hardware_controller");
+pcPartRoute.get("/:part", pcPart_controller.getAll_parts);
+pcPartRoute.get("/:part/:name", pcPart_controller.getSingle_part);
 
-const pcPart = Router();
-
-pcPart.get("/", (req, res) => {
-  res.send("get all parts");
-});
-
-pcPart.get("/:name", (req, res) => {
-  res.send(`get info part ${req.params.name}`);
-});
-
-module.exports = pcPart;
+module.exports = pcPartRoute;

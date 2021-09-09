@@ -1,24 +1,11 @@
-const Router = require("express-promise-router");
+const { Router } = require("express");
 const itemRoute = Router();
+const item_controller = require("../../controller/item_controller");
 
-itemRoute.get("/", (req, res, next) => {
-  res.send("show all items");
-});
-
-itemRoute.post("/", (req, res, next) => {
-  res.send(`create new item`);
-});
-
-itemRoute.get("/:id", (req, res, next) => {
-  res.send(`show single item ${req.params.id} `);
-});
-
-itemRoute.put("/:id", (req, res, next) => {
-  res.send(`update item ${req.params.id}`);
-});
-
-itemRoute.delete("/:id", (req, res, next) => {
-  res.send(`delete item ${req.params.id}`);
-});
+itemRoute.get("/", item_controller.getAll_items);
+itemRoute.post("/", item_controller.create_item);
+itemRoute.get("/:id", item_controller.getSingle_item);
+itemRoute.put("/:id", item_controller.update_item);
+itemRoute.delete("/:id", item_controller.delete_item);
 
 module.exports = itemRoute;

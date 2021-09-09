@@ -1,21 +1,14 @@
-const Router = require("express-promise-router");
+const { Router } = require("express");
 
 const authRoute = Router();
 
-authRoute.post("/Login", (req, res) => {
-  res.send("Login");
-});
+const auth_controller = require("../../controller/auth_controller");
 
-authRoute.post("/Register", (req, res) => {
-  res.send("Register");
-});
-
-authRoute.post("/RefreshToken", (req, res) => {
-  res.send("RefreshToken");
-});
-
-authRoute.post("/logout", (req, res) => {
-  res.send("logout");
-});
+authRoute.post("/Login", auth_controller.login);
+authRoute.post("/Register", auth_controller.register);
+authRoute.post("/RefreshToken", auth_controller.refreshToken);
+authRoute.post("/logout", auth_controller.logout);
+authRoute.post("/forgetPassword", auth_controller.forget_password);
+authRoute.post("/changePassword", auth_controller.change_password);
 
 module.exports = authRoute;
