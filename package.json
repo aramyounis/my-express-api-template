@@ -2,12 +2,12 @@
   "name": "torgameapi",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "./src/app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon app.js",
-    "run:pcpart": "nodemon ./helper/pcPart.js",
-    "getNames": "nodemon ./helper/getAllName.js.js"
+    "run:pcpart": "nodemon ./src/helper/pcPart.js",
+    "getNames": "nodemon ./src/helper/getAllName.js.js"
   },
   "author": "",
   "license": "ISC",
