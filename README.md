@@ -32,7 +32,7 @@
 
 - Customer and seller
 
-  - add item
+  - [] add item
   - delete item yourself
   - update item yourself
   - update information ( like password , email, location) yourself
