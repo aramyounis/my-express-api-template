@@ -9,6 +9,21 @@
     "run:pcpart": "nodemon ./src/helper/pcPart.js",
     "getNames": "nodemon ./src/helper/getAllName.js.js"
   },
+  "_moduleAliases": {
+    "@root": ".",
+    "@/controller": "./src/controller",
+    "@/helpers": "./src/helpers",
+    "@/middleware": "./src/middleware",
+    "@/models": "./src/models",
+    "@/services": "./src/services",
+    "@/validations": "./src/validations",
+    "@/db": "./src/db",
+    "@/config": "./src/config",
+    "@/routers": "./src/routers"
+  },
+  "_moduleDirectories": [
+    "node_modules_custom"
+  ],
   "author": "",
   "license": "ISC",
   "dependencies": {
@@ -21,6 +36,7 @@
     "g": "^2.0.1",
     "isomorphic-fetch": "^3.0.0",
     "knex": "^0.95.10",
+    "module-alias": "^2.2.2",
     "morgan": "^1.10.0",
     "nodemon": "^2.0.12",
     "pcpartpickerparser": "^2.0.0",

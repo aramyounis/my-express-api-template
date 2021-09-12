@@ -1,6 +1,6 @@
 const { Router } = require("express");
 const itemRoute = Router();
-const item_controller = require("../../controller/item_controller");
+const item_controller = require("@/controller/item_controller");
 
 itemRoute.get("/", item_controller.getAll_items);
 itemRoute.post("/", item_controller.create_item);

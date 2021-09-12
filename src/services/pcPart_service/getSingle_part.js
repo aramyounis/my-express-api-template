@@ -1,7 +1,7 @@
 const fs = require("fs");
 const path = require("path");
 
-const loadItemsPage = require("../../helpers/getItemPart");
+const loadItemsPage = require("@/helpers/getItemPart");
 
 const getSingle_part = async (part, name) => {
   try {

@@ -1,5 +1,6 @@
+require("module-alias/register");
 const express = require("express");
-const router = require("./routers");
+const router = require("@/routers");
 const app = express();
 const cors = require("cors");
 const morgan = require("morgan");

@@ -2,7 +2,7 @@ const { Router } = require("express");
 
 const userRoute = Router();
 
-const user_controller = require("../../controller/user_controller");
+const user_controller = require("@/controller/user_controller");
 
 userRoute.get("/:username", user_controller.getUser_info);
 
