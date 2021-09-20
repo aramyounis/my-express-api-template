@@ -5,9 +5,8 @@ const app = express();
 const cors = require("cors");
 const morgan = require("morgan");
 require("dotenv").config({
-  path: "./dev.env",
+  path: "../.dev.env",
 });
-console.log(process.env.DATABASE_URL);
 app.use(morgan("dev"));
 app.use(cors());
 app.use(express.urlencoded({ extended: false }));
