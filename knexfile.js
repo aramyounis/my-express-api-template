@@ -1,12 +1,14 @@
 // Update with your config settings.
-
+require("module-alias/register");
+const config = require("@/config");
 module.exports = {
   development: {
-    client: "postgresql",
+    client: "pg",
     connection: {
-      database: "api_db",
-      user: "postgres",
-      password: "1081995",
+      host: config.DB_HOST,
+      database: config.DB_NAME,
+      user: config.DB_USER,
+      password: config.DB_PASS,
     },
 
     migrations: {

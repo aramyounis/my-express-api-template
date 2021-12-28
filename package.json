@@ -4,8 +4,9 @@
   "description": "",
   "main": "./src/app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon app.js"
+    "start": "nodemon app.js",
+    "latest": "yarn run knex migrate:latest",
+    "rollback": "yarn run knex migrate:rollback"
   },
   "_moduleAliases": {
     "@root": ".",
@@ -23,7 +24,7 @@
     "node_modules_custom"
   ],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^10.0.0",
